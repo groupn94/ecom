@@ -61,6 +61,6 @@ function calc(){
     }
   }
   var t1=new teature('hosam',40,'h@gmail.com','cairo');
-  t1.set_sallery(100);
+  t1.set_sallery(500);
 
 
