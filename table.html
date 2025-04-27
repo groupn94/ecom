@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body class="container-fluid">
+  <div class="row my-3">
+    <div class="col-md-4"><input type="text" id="name" class="form-control" placeholder="Student Name"></div>
+    <div class="col-md-4"><input type="text" id="email" class="form-control" placeholder="email"></div>
+    <div class="col-md-2"><input type="text" id="age" class="form-control"placeholder='Age'></div>
+    <div class="col-md-2"><button class="btn btn-primary w-100" onclick="create()">Add</button></div>
+  </div>
+
+      <table class="table  table-hover table-primary">
+             <tr><th>Name</th><th>Age</th><th>email</th><th>Delete</th></tr>
+             <tbody id="data">
+             </tbody>
+      </table>
+
+      <p id="s"></p>
+  <script src="./js/arrayes.js"></script>

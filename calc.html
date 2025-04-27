@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+    <div class="mb-3">
+             <input id="no1" class="form-control">
+     </div>
+   
+     <div class="mb-3">
+        <div class="mb-1">
+            <button class="btn btn-info" id='b0' onclick="setBtn('0','b0')">0</button> 
+            <button class="btn btn-info" id='b1' onclick="setBtn('1','b1')">1</button>
+            <button class="btn btn-info" id='b2' onclick="setBtn('2','b2')">2</button>
+            <button class="btn btn-info" id='b3' onclick="setBtn('3','b3')">3</button>
+        </div>
+        <div class="mb-1">
+        <button class="btn btn-info" id='b+'  onclick="setBtn('+','b+')">+</button> 
+        <button class="btn btn-info" id='b-' onclick="setBtn('-','b-')">-</button>
+        <button class="btn btn-info" id='b*'onclick="setBtn('*','b*')">*</button>
+        <button class="btn btn-info" id='b/'onclick="setBtn('/','b/')">/</button>
+        </div>
+        <div class="mb-1">
+            <button class="btn btn-info"onclick="calc()">=</button>
+          </div>  
+     </div>
+
+    </div>
+    </div>
+   <p id="res"></p>  
+   <script>
+
+    function calc(){
+        var x=document.getElementById('no1').value;
+         var res=eval(x);
+        document.getElementById('res').innerHTML= "Result :" + res;  
+    }
+    function setBtn(btn,id){
+        document.getElementById('no1').value+=btn;
+        // buttons to default backgroud
+        var buttons=document.getElementsByTagName('button');
+         for(index in buttons){
+            if(index<buttons.length){
+              buttons[index].classList.remove('btn-success');
+              buttons[index].classList.add('btn-info');
+            }
+         }
+
+        document.getElementById(id).classList.remove('btn-info');
+        document.getElementById(id).classList.add('btn-success');
+    }
+
+    </script>
+ </body>
+ </html>
